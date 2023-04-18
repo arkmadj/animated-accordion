@@ -103,6 +103,23 @@ img {
 .accordion-title {
 	font-size: 1.5rem;
 	font-weight: 700;
+	position: relative;
+}
+
+
+@media (max-width: 44.999em){
+	body{
+		background: red;
+	}
+	.accordion-title::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--__button-size);
+		background: pink;
+	}
 }
 
 .accordion-image {
