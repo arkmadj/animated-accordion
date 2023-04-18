@@ -29,6 +29,7 @@ img {
 .accordion {
 	--__button-size: 3rem;
 	--__panel-padding: 0.75rem;
+  --__panel-gap: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -49,6 +50,8 @@ img {
 	border-radius: calc(
 		((var(--__panel-padding) * 2) + var(--__button-size)) / 2
 	);
+
+	transition: flex-basis 500ms;
 }
 
 .accordion-panel:nth-of-type(1) {
@@ -76,8 +79,20 @@ img {
 }
 
 .accordion-content > p {
-  transform: translateY(2rem);
-  opacity: 0;
+	transform: translateY(2rem);
+	opacity: 0;
+	transition: transform 500ms, opacity 500ms;
+  margin-left: calc(var(--__button-size) + var(--__panel-gap));
+}
+
+.accordion-panel:has([aria-expanded="true"]) p {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.accordion-title {
+	font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .accordion-image {
@@ -92,7 +107,7 @@ img {
 .accordion-trigger {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--__panel-gap);
 	flex-direction: row-reverse;
 	background: transparent;
 	border: 0;
