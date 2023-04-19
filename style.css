@@ -33,6 +33,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	contain: content;
 
 	margin-top: 10rem;
 }
