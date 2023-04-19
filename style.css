@@ -105,6 +105,8 @@ img {
 	font-weight: 700;
 	position: relative;
 	isolation: isolate;
+	display: grid;
+	align-items: center;
 }
 
 
@@ -112,7 +114,6 @@ img {
 	.accordion-title::after{
 		content: "";
 		position: absolute;
-		top: 0;
 		left: 0;
 		width: 100%;
 		height: var(--__button-size);
