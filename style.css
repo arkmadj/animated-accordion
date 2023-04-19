@@ -93,11 +93,11 @@ img {
 
 .accordion-trigger{
 	outline: 0;
-	outline-offset: 4px;
 }
 
 .accordion-panel:focus-within{
 	outline: 3px solid var(--__panel-color);
+	outline-offset: 4px;
 }
 
 .accordion-content > p {
