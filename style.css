@@ -108,9 +108,6 @@ img {
 
 
 @media (max-width: 44.999em){
-	body{
-		background: red;
-	}
 	.accordion-title::after{
 		content: "";
 		position: absolute;
@@ -119,6 +116,7 @@ img {
 		width: 100%;
 		height: var(--__button-size);
 		background: pink;
+		z-index: -1;
 	}
 }
 
