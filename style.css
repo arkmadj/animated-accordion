@@ -62,7 +62,7 @@ img {
 
 @media (prefers-reduced-motion: no-preference) {
 	.accordion-panel {
-		transition: flex-basis 500ms;
+		transition: flex-basis 500ms, flex-grow 500ms;
 	}
 }
 
@@ -98,7 +98,7 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.accordion-content {
+	.accordion-content > p {
 		transition: transform 500ms 250ms, opacity 500ms 250ms;
 	}
 }
