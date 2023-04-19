@@ -37,6 +37,13 @@ img {
 	margin-top: 10rem;
 }
 
+@media (min-width: 45em){
+	.accordion {
+		flex-direction: row;
+		height: 30rem;
+	}
+}
+
 .accordion * {
 	margin: 0;
 }
@@ -81,6 +88,7 @@ img {
 
 .accordion-panel:has([aria-expanded="true"]) {
 	flex-basis: clamp(15rem, 40vh, 20rem);
+	flex-grow: 1;
 }
 
 .accordion-content > p {
