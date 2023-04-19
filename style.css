@@ -82,13 +82,22 @@ img {
 	--__panel-color: hsl(350, 70%, 50%);
 }
 
-.accordion-panel:nth-of-type(5) {
+.accordion-panel:nth-of-type(5) {		
 	--__panel-color: hsl(20, 70%, 50%);
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
 	flex-basis: clamp(15rem, 40vh, 20rem);
 	flex-grow: 1;
+}
+
+.accordion-trigger{
+	outline: 0;
+	outline-offset: 4px;
+}
+
+.accordion-panel:focus-within{
+	outline: 3px solid var(--__panel-color);
 }
 
 .accordion-content > p {
@@ -98,8 +107,8 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	.accordion-content > p {
-		transition: transform 500ms 250ms, opacity 500ms 250ms;
+	.accordion-panel:has([aria-expanded="true"]) p {
+		transition: transform 500ms 500ms, opacity 500ms 500ms;
 	}
 }
 
