@@ -34,7 +34,7 @@ img {
 	flex-direction: column;
 	gap: 1rem;
 
-	margin-top: 20rem;
+	margin-top: 10rem;
 }
 
 .accordion * {
@@ -117,7 +117,7 @@ img {
 		left: calc((var(--__panel-gap) + var(--__button-size)) * -1);
 		width: calc(100% + (var(--__button-size) * 2));
 		height: var(--__button-size);
-		background: pink;
+		background: hsl(0 0% 0% / 0.5);
 		z-index: -1;
 		border-radius: 100vw;
 	}
