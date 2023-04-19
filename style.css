@@ -114,11 +114,12 @@ img {
 	.accordion-title::after{
 		content: "";
 		position: absolute;
-		left: 0;
-		width: 100%;
+		left: calc((var(--__panel-gap) + var(--__button-size)) * -1);
+		width: calc(100% + (var(--__button-size) * 2));
 		height: var(--__button-size);
 		background: pink;
 		z-index: -1;
+		border-radius: 100vw;
 	}
 }
 
@@ -153,4 +154,5 @@ img {
 	aspect-ratio: 1/1;
 	/* padding: 0.75rem; */
 	border-radius: 50%;
+	z-index: 10;
 }
