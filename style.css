@@ -125,6 +125,7 @@ img {
 	isolation: isolate;
 	display: grid;
 	align-items: center;
+	white-space: nowrap;
 }
 
 
